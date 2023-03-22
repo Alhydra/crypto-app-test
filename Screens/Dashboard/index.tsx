@@ -129,6 +129,7 @@ export default function Dashboard() {
       </View>
     );
   }
+  const renderBalance = balance && profit;
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -139,7 +140,7 @@ export default function Dashboard() {
         isLight
       />
       <View style={styles.content}>
-        {balance && profit && (
+        {renderBalance && (
           <Balance balance={balance} profit={profit} isProfit={profit >= 0} />
         )}
         {assets && <Assets assets={assets} />}

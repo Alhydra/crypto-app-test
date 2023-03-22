@@ -27,7 +27,7 @@ export default function Auth() {
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   const errorCheck = () => {
-    if (checkWordCount(recoverySeed) != 5) {
+    if (checkWordCount(recoverySeed) != 12) {
       setError(true);
       setErrorMsg(Translation.en.authentication.wordCountError);
       return false;
